@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../services/user.service';
+import { User } from '../other/interfaces';
 
 @Component({
   selector: 'app-parte6',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Parte6Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _user: UserService
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this._user.getLista().subscribe(datos => this.datos = datos);
+
   }
+  datos: User[] = [];
 
 }

@@ -1,11 +1,7 @@
-export interface LoginResponse{
-    success: boolean;
-    user: User;
-    token: string;
+export interface User{
+    id: number;
+    name: string;
+    username: string
 }
 
-export interface User{
-    name: string;
-    avatar: string;
-    level: number;
-}
+//export interface All any[]= []

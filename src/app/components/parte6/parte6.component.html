@@ -1,1 +1,10 @@
-<p>parte6 works!</p>
+<ul >
+    <li *ngFor="let users of datos">
+        {{users.id}}
+        <br>
+        Name: {{ users.name }}
+        <br>
+        UserName: {{ users.username }}
+        <br><br>
+    </li>
+</ul>
